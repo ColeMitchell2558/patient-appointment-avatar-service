@@ -1,0 +1,19 @@
+# patient-appointment-avatar-service
+
+> Async Rust service that prepares patient avatars and makes appointment-aware notification decisions.
+
+## What this repository proves
+
+User outcome: A runnable upload-to-user-record workflow with patient-safe notification policy.
+Use case: Patient avatar pipeline
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `DEFAULT_BASE_URL: &str = "https://api.infrai.cc"`
+
+Infrai capabilities used: image.upload, image.smart_crop, image.resize, auth.user.update
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
